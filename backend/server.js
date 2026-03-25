@@ -15,3 +15,7 @@ app.use("/products", productRouter)
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
 });
+
+app.get("/products/test", (req, res) => {
+	res.json({ message: "API is working!" });
+});
